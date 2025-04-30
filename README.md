@@ -1,4 +1,3 @@
-
 # 🌳 Árvore Binária em Java
 
 Este projeto é uma implementação de uma árvore binária em Java, ideal para estudos e práticas de estruturas de dados. 📚
@@ -36,18 +35,18 @@ Este projeto é uma implementação de uma árvore binária em Java, ideal para 
    java -cp bin Main
    ```
 
-   > *Substitua `Main` pelo nome da classe principal, se diferente.*
+   > _Substitua `Main` pelo nome da classe principal, se diferente._
 
 ## 🛠️ Funcionalidades
 
-- ✅ Inserção de nós na árvore -  ✅
-- 🔍 Busca de elementos - ⌛
-- 🔄 Travessias:  - ⌛
+- ✅ Inserção de nós na árvore - ✅
+- 🔍 Busca de elementos - ✅
+- 🔄 Travessias: - ⌛
   - Pré-ordem
   - Em-ordem
   - Pós-ordem
-- 📏 Cálculo da altura da árvore  - ⌛
-- ❌ Remoção de nós  - ⌛
+- 📏 Cálculo da altura da árvore - ✅
+- ❌ Remoção de nós - ⌛
 
 ## 📷 Exemplo de Uso
 

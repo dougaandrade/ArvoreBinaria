@@ -1,3 +1,7 @@
+
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Arvore {
 
   private Folha folha;
@@ -41,4 +45,53 @@ public class Arvore {
 
     }
   }
+
+  public boolean amplitude(int valorBuscado) {
+    if (this.isEmpty()) {
+      System.out.println("Árvore vazia.");
+      return false;
+    }
+
+    Queue<Arvore> fila = new LinkedList<>();
+    fila.add(this);
+
+    while (!fila.isEmpty()) {
+      Arvore atual = fila.poll();
+
+      if (atual.folha != null) {
+        System.out.println("Visitando: " + atual.folha.getValor());
+
+        if (atual.folha.getValor() == valorBuscado) {
+          System.out.println("Valor encontrado: " + valorBuscado);
+          return true;
+        }
+      }
+
+      if (atual.esquerda != null)
+        fila.add(atual.esquerda);
+      if (atual.direita != null)
+        fila.add(atual.direita);
+    }
+
+    System.out.println("Valor " + valorBuscado + " não encontrado.");
+    return false;
+  }
+
+  public void exibirGraus() {
+    if (this.isEmpty())
+      return;
+
+    int grau = 0;
+    if (this.esquerda != null)
+      grau++;
+    if (this.direita != null)
+      grau++;
+    System.out.println("Nó " + this.folha.getValor() + " tem grau " + grau);
+
+    if (this.esquerda != null)
+      this.esquerda.exibirGraus();
+    if (this.direita != null)
+      this.direita.exibirGraus();
+  }
+
 }

@@ -9,4 +9,5 @@ public class Folha {
   public int getValor() {
     return valor;
   }
+
 }
